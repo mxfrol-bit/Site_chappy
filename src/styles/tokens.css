@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+  /* surfaces */
+  --bg:#05060c;
+  --bg-1:#080a12;
+  --panel:#0b0e18;
+  --panel-2:#0f131f;
+  --panel-3:#141827;
+  --line:rgba(255,255,255,.09);
+  --line-2:rgba(255,255,255,.16);
+  --glass:rgba(255,255,255,.04);
+  --scrim:rgba(5,6,12,.7);
+
+  /* text */
+  --ink:#f4f6fc;
+  --ink-2:rgba(244,246,252,.62);
+  --ink-3:rgba(244,246,252,.38);
+
+  /* accent + gradient */
+  --accent:#8a8aff;
+  --accent-2:#22d3ee;
+  --grad:linear-gradient(120deg,#6366f1,#22d3ee);
+  --grad-soft:linear-gradient(120deg,rgba(99,102,241,.18),rgba(34,211,238,.18));
+
+  /* status */
+  --hot:#ff5c7a;
+  --new:#22d3ee;
+  --gold:#f5c451;
+  --green:#5ce6b0;
+  --warn:#f5a623;
+  --danger:#ff5c7a;
+
+  /* radii */
+  --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:22px; --r-pill:999px;
+
+  /* spacing (8px scale) */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px;
+
+  /* fonts */
+  --font-display:'Bricolage Grotesque',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+
+  /* layout */
+  --sidebar-w:250px;
+  --topbar-h:60px;
+  --maxw:1240px;
+
+  /* motion */
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --shadow:0 24px 60px rgba(0,0,0,.5);
+}

@@ -1,0 +1,78 @@
+/* Shared, token-driven UI classes (component logic lives in React files). */
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14px;padding:10px 18px;border-radius:var(--r);min-height:42px;transition:transform .15s var(--ease),background .2s,border-color .2s;white-space:nowrap;border:1px solid transparent}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primary{background:var(--grad);color:#06070d;font-weight:700}
+.btn-ghost{border-color:var(--line-2);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink-2)}
+.btn-soft{background:var(--panel-2);border-color:var(--line);color:var(--ink)}
+.btn-soft:hover{border-color:var(--line-2)}
+.btn-sm{padding:7px 13px;min-height:36px;font-size:13px}
+.btn-lg{padding:14px 24px;min-height:52px;font-size:15px}
+.btn-block{width:100%}
+
+/* badges + chips */
+.badge{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:var(--r-pill);border:1px solid var(--line);color:var(--ink-2)}
+.badge-hot{color:var(--hot);border-color:rgba(255,92,122,.35)}
+.badge-new{color:var(--new);border-color:rgba(34,211,238,.35)}
+.badge-gold{color:var(--gold);border-color:rgba(245,196,81,.35)}
+.badge-top{color:var(--accent);border-color:rgba(138,138,255,.4)}
+.badge-green{color:var(--green);border-color:rgba(92,230,176,.35)}
+.chip{font-family:var(--font-mono);font-size:12px;padding:7px 13px;border-radius:var(--r-pill);border:1px solid var(--line);color:var(--ink-2);background:transparent;transition:.15s var(--ease);cursor:pointer;white-space:nowrap}
+.chip:hover{color:var(--ink);border-color:var(--line-2)}
+.chip.active{background:var(--grad-soft);border-color:var(--accent);color:var(--ink)}
+
+/* cards + surfaces */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg)}
+.card-hover{transition:transform .18s var(--ease),border-color .2s}
+.card-hover:hover{transform:translateY(-3px);border-color:var(--line-2)}
+.pad{padding:20px}
+.pad-lg{padding:28px}
+
+/* forms */
+.input,.textarea,select.input{width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:var(--r);padding:11px 14px;font-size:14px;color:var(--ink);transition:border-color .15s}
+.textarea{resize:vertical;min-height:96px;line-height:1.5}
+.input:focus,.textarea:focus{border-color:var(--accent);outline:none}
+.label{font-size:12px;color:var(--ink-2);margin-bottom:7px;display:block}
+
+/* layout helpers */
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.autogrid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.row{display:flex;gap:12px;align-items:center}
+.wrap-row{display:flex;gap:10px;flex-wrap:wrap}
+.between{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.section{padding:64px 0}
+.stack{display:flex;flex-direction:column}
+.spacer{flex:1}
+
+/* typography helpers */
+.h1{font-size:clamp(32px,5vw,60px);line-height:1.04}
+.h2{font-size:clamp(24px,3vw,40px)}
+.h3{font-size:20px}
+.sub{color:var(--ink-2);font-size:16px}
+.k{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+/* two-column detail layout (main + sidebar) that collapses to one column on narrow screens */
+.split{display:grid;grid-template-columns:1.5fr 1fr;gap:var(--s4);align-items:start}
+.split>*{min-width:0} /* let tracks shrink below child min-content so media/scrollers contain */
+@media(max-width:760px){.split{grid-template-columns:1fr}}
+.price{font-family:var(--font-mono)}
+
+/* media */
+.cover{background:var(--panel-2);overflow:hidden;position:relative}
+.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{background:var(--grad-soft)}
+
+/* responsive base */
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .section{padding:48px 0}
+}
+@media(max-width:560px){
+  .g4,.g3,.g2{grid-template-columns:1fr}
+}
